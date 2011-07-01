@@ -1,1 +1,1 @@
-This tool eats MARC data, and checks if the subject headings are valid.
+This tool eats MARC data, and checks if the subject headings are valid. The subject headings are read from a plain text file with a subject per line. Such a file can prepared from a more structured format, f.ex. SKOS.
