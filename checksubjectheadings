@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use MARC::Batch;
+
+my $file = "vaski-kunnostettu.mrc";
+my $batch = MARC::Batch->new('USMARC', $file);
+my $sanasto = "/home/mace/ysa.lista.alt_too.latin1";
+
+open(TESAURUSFILE, $sanasto) or die("ded on opening the tesaurus");
+@tesaurus = <TESAURUSFILE>;
+
+$batch->strict_off();
+while (my $record = $batch->next()) {
+        for my $termi ($record->subfield('652', 'a')) {
+		if (not grep /$termi/i, @tesaurus) {
+			print($termi, ";", $record->field('001')->as_string,"\n");
+		}
+	}
+}
+close TESAURUSFILE;
+exit;
