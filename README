@@ -1,1 +1,8 @@
-This tool eats MARC data, and checks if the subject headings are valid. The subject headings are read from a plain text file with a subject per line. Such a file can prepared from a more structured format, f.ex. SKOS.
+This tool eats MARC data, and checks if the subject headings are valid.
+
+The subject headings are read from a plain text file with a subject per
+line. Such a file can prepared from a more structured format, f.ex. SKOS.
+
+I wrote a blogpost about this program and running it against the Finnish
+Vaski-libraryconsortias database, where i found several thousand
+occurrances of uncontrolled terms. The blogpost is at http://xmacex.wordpress.com/2011/07/13/vaskin-asiasanat-jotka-eivat-ole-ysassa/
